@@ -11,7 +11,7 @@ const Positions = () => {
 
   const loadPositions = async () => {
     try {
-      const res = await axios.get("http://localhost:3001/positions", {
+      const res = await axios.get("https://stockers-backend.vercel.app/positions", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
