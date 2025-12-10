@@ -1,0 +1,104 @@
+/* Zerodha Style Login Page */
+
+/* ===== ROOT COLORS ===== */
+:root {
+  --primary-blue: #387ed1;
+  --primary-hover: #296bb0;
+  --text-dark: #333;
+  --text-light: #777;
+  --bg-light: #f8f9fa;
+  --border-light: #e5e5e5;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+.all{
+  padding: 150px;
+  background-color: #4b74a5;
+}
+
+.login-container {
+  width: 400px;
+margin-left: 35%;
+  padding: 2.5rem 2.8rem;
+  background: #fff;
+  border: 1px solid var(--border-light);
+  border-radius: 6px;
+  box-shadow: 0px 8px 24px rgba(0,0,0,0.06);
+  text-align: center;
+  font-family: "Inter", sans-serif;
+}
+
+/* ===== TITLE ===== */
+.login-container h2 {
+  color: var(--text-dark);
+  font-weight: 600;
+  font-size: 1.6rem;
+  margin-bottom: 1.6rem;
+}
+
+/* ===== FORM ===== */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* ===== INPUT FIELD ===== */
+.login-container input {
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.login-container input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 2px rgba(56, 126, 209, 0.15);
+}
+
+/* ===== BUTTON ===== */
+.login-container button {
+  padding: 12px;
+  background: var(--primary-blue);
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.login-container button:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* ===== SIGNUP LINK ===== */
+.signup-msg {
+  margin-top: 0.6rem;
+  font-size: 0.9rem;
+  color: var(--text-light);
+}
+
+.signup-msg a {
+  color: var(--primary-blue);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.signup-msg a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 500px) {
+  .login-container {
+    width: 90%;
+    padding: 2rem;
+    margin-top: 50px;
+  }
+}

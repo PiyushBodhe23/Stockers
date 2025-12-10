@@ -11,18 +11,27 @@ function WatchListAction({ uid }) {
     generalContext.openBuyWindow(uid);
   };
 
+  const handleSellClick = () => {
+    generalContext.openSellWindow(uid);
+  };
+
   return (
     <span className="actions">
+      {/* BUY */}
       <span>
-        <Tooltip title="Buy (B)" placement="top" arrow TransitionComponent={Grow} onClick={handleBuyClick}>
-          <button className="buy">Buy</button>
+        <Tooltip title="Buy (B)" placement="top" arrow TransitionComponent={Grow}>
+          <button className="buy" onClick={handleBuyClick}>Buy</button>
         </Tooltip>
       </span>
+
+      {/* SELL */}
       <span>
         <Tooltip title="Sell (S)" placement="top" arrow TransitionComponent={Grow}>
-          <button className="sell">Sell</button>
+          <button className="sell" onClick={handleSellClick}>Sell</button>
         </Tooltip>
       </span>
+
+      {/* ANALYTICS */}
       <span>
         <Tooltip title="Analytics (A)" placement="top" arrow TransitionComponent={Grow}>
           <button className="action">
@@ -30,6 +39,8 @@ function WatchListAction({ uid }) {
           </button>
         </Tooltip>
       </span>
+
+      {/* MORE */}
       <span>
         <Tooltip title="More" placement="top" arrow TransitionComponent={Grow}>
           <button className="action">

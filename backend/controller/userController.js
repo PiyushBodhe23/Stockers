@@ -1,48 +1,71 @@
-require("dotenv").config();
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const { UserModel } = require("../middlewares/model/UserModel");
 
-const { UserModel } = require("../model/UserModel");
-
-module.exports.register = async (req, res) => {
+const loginUser = async (req, res) => {
   try {
-    console.log(req.body);
-    const existingUser = await UserModel.findOne({ email: req.body.email });
-    if (existingUser) {
-      return res.status(400).json({ error: "Email already exists" });
+    const { email, password } = req.body;
+    const user = await UserModel.findOne({ email });
+
+    if (!user) {
+      return res.status(400).json({ error: "User not found" });
     }
 
-    const hashedPassword = await bcrypt.hash(req.body.password, 10);
+    const valid = await bcrypt.compare(password, user.password);
+    if (!valid) {
+      return res.status(400).json({ error: "Wrong password" });
+    }
 
-    const newUser = new UserModel({
-      username: req.body.username,
-      email: req.body.email,
-      password: hashedPassword,
-    });
-    await newUser.save();
+    const token = jwt.sign(
+      { id: user._id, email: user.email },
+      process.env.JWT_SECRET,
+      { expiresIn: "7d" }
+    );
 
-    const token = jwt.sign({ email: newUser.email }, process.env.secret);
-    res.status(200).json({ token });
-  } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
+    return res.json({ token });
+
+  } catch (err) {
+    console.log(err);
+    return res.status(500).json({ error: "Server error" });
   }
 };
 
-module.exports.login = async (req, res) => {
+const registerUser = async (req, res) => {
   try {
-    const user = await UserModel.findOne({ email: req.body.email });
-    if (!user) {
-      return res.status(401).json({ error: "Invalid credentials" });
+    const { name, email, password } = req.body;
+
+    const existing = await UserModel.findOne({ email });
+    if (existing) {
+      return res.status(400).json({ error: "Email already exists" });
     }
 
-    const passwordMatch = await bcrypt.compare(req.body.password, user.password);
-    if (!passwordMatch) {
-      return res.status(401).json({ error: "Invalid credentials" });
-    }
+    const hashed = await bcrypt.hash(password, 10);
 
-    const token = jwt.sign({ email: user.email }, process.env.secret);
-    res.status(200).json({ token });
-  } catch (error) {
-    res.status(500).json({ error: "Internal server error" });
+    const newUser = new UserModel({
+      name,
+      email,
+      password: hashed,
+    });
+
+    await newUser.save();
+
+    const token = jwt.sign(
+      { id: newUser._id, email: newUser.email },
+      process.env.JWT_SECRET,
+      { expiresIn: "7d" }
+    );
+
+    res.json({ token });
+
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({ error: err.message });
   }
+};
+
+
+// **** IMPORTANT EXPORT ****
+module.exports = {
+  loginUser,
+  registerUser,
 };

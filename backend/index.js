@@ -1,27 +1,39 @@
 require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
-const app = express();
 const cors = require("cors");
-const bodyParser = require("body-parser");
-
-const port = process.env.PORT || 3002;
-const url = process.env.MONGO_URL;
+const cookieParser = require("cookie-parser");
 
 const holdingsRoute = require("./routes/holdingsRoute");
 const positionsRoute = require("./routes/positionsRoute");
-const userRoute = require("./routes/userRoute");
 const orderRoute = require("./routes/orderRoute");
+const userRoute = require("./routes/userRoute");
+
+const PORT = process.env.PORT || 3001;
+const uri = process.env.MONGO_URL;
+
+const app = express();
 
 app.use(cors());
-app.use(bodyParser.json());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser());
 
+// Attach Routes
 app.use("/holdings", holdingsRoute);
 app.use("/positions", positionsRoute);
-app.use("/user", userRoute);
 app.use("/orders", orderRoute);
+app.use("/users", userRoute);
 
-app.listen(port, async () => {
-  console.log(`App Is listening On ${port}`);
-  await mongoose.connect(url).then(() => console.log("Connected To DB"));
-});
+// MongoDB Connect then start server
+mongoose
+  .connect(uri)
+  .then(() => {
+    console.log("DB Connected!");
+    app.listen(PORT, () => {
+      console.log(`Server running on PORT ${PORT}`);
+    });
+  })
+  .catch((err) => {
+    console.log("DB Connection Failed:", err);
+  });

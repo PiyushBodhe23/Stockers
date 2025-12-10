@@ -1,19 +1,30 @@
-require("dotenv").config();
 const jwt = require("jsonwebtoken");
+const SECRET = process.env.JWT_SECRET; // move to .env later
 
-const verifyToken = (req, res, next) => {
-  const token = req.headers["authorization"];
-  if (!token) {
-    return res.status(401).json({ error: "Needs Token" });
-  }
+const loginUser = async (req, res) => {
+  try {
+    const { email, password } = req.body;
 
-  jwt.verify(token, process.env.secret, (err, decoded) => {
-    if (err) {
-      return res.status(401).json({ error: "Unauthorized" });
+    const user = await UserModel.findOne({ email });
+    if (!user) {
+      return res.status(400).json({ error: "User not found" });
     }
-    req.user = decoded;
-    next();
-  });
-};
 
-module.exports = { verifyToken };
+    const validPass = await bcrypt.compare(password, user.password);
+    if (!validPass) {
+      return res.status(400).json({ error: "Wrong password" });
+    }
+
+    const token = jwt.sign(
+  { id: newUser._id, email: newUser.email },
+  process.env.JWT_SECRET,
+  { expiresIn: "7d" }
+);
+
+res.json({ token });
+;
+
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};

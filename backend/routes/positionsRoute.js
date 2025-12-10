@@ -1,10 +1,8 @@
 const express = require("express");
 const router = express.Router();
 
-const { verifyToken } = require("../middlewares/verifyToken");
+const { getAllPositions } = require("../controller/positionsController");
 
-const { index } = require("../controller/positionsController");
-
-router.get("/index", verifyToken, index);
+router.get("/", getAllPositions);
 
 module.exports = router;

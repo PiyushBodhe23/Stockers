@@ -23,10 +23,11 @@ export default function Login() {
   const { login, user } = useAuth();
 
   React.useEffect(() => {
-    if (user) {
-      navigate("/");
-    }
-  }, []);
+  if (user) {
+    navigate("/");
+  }
+}, [user]);
+
 
   const handleSubmit = async (event) => {
     event.preventDefault();
@@ -36,7 +37,7 @@ export default function Login() {
       password: formData.get("password"),
     };
     axios
-      .post("https://zerodha-clone-backend-8nlf.onrender.com/user/login", data, {
+      .post("http://localhost:3001/users/login", data, {
         headers: {
           "Content-Type": "application/json",
         },

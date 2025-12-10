@@ -1,24 +1,26 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
-
 import { useAuth } from "../hooks/useAuth";
 
 const Orders = () => {
-  const [allOrders, SetAllOrders] = useState([]);
-  let { user } = useAuth();
+  const [allOrders, setAllOrders] = useState([]);
+  const { user } = useAuth();
 
   useEffect(() => {
+    const token = localStorage.getItem("token");
+
     axios
-      .get("https://zerodha-clone-backend-8nlf.onrender.com/orders/index", {
+      .get("http://localhost:3001/orders", {
         headers: {
-          Authorization: user,
+          Authorization: `Bearer ${token}`,
         },
       })
       .then((res) => {
-        SetAllOrders(res.data);
-      });
-  }, [allOrders]);
+        setAllOrders(res.data);
+      })
+      .catch((err) => console.log(err));
+
+  }, []); // 🔥 important
 
   return (
     <>
@@ -26,23 +28,25 @@ const Orders = () => {
 
       <div className="order-table">
         <table>
-          <tr>
-            <th>Name</th>
-            <th>Qty.</th>
-            <th>Price</th>
-            <th>Mode</th>
-          </tr>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Qty.</th>
+              <th>Price</th>
+              <th>Mode</th>
+            </tr>
+          </thead>
 
-          {allOrders.map((stock, index) => {
-            return (
+          <tbody>
+            {allOrders.map((stock, index) => (
               <tr key={index}>
                 <td>{stock.name}</td>
                 <td>{stock.qty}</td>
-                <td>{stock.price.toFixed(2)}</td>
+                <td>{Number(stock.price)?.toFixed(2)}</td>
                 <td>{stock.mode}</td>
               </tr>
-            );
-          })}
+            ))}
+          </tbody>
         </table>
       </div>
     </>

@@ -1,33 +1,41 @@
-import { createContext, useContext, useMemo } from "react";
-import { useNavigate } from "react-router-dom";
-import { useLocalStorage } from "./useLocalStorage";
+import { useState, useEffect, useContext, createContext } from "react";
+import {jwtDecode} from "jwt-decode";
+
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [user, setUser] = useLocalStorage("user", null);
-  const navigate = useNavigate();
+  const [user, setUser] = useState(null);
 
-  const login = async (data) => {
-    setUser(data);
-    navigate("/");
+ useEffect(() => {
+  const token = localStorage.getItem("token");
+  if (!token) return;
+
+  try {
+    const decoded = jwtDecode(token);
+    setUser(decoded);
+  } catch (err) {
+    console.error("Invalid token:", err);
+    localStorage.removeItem("token");
+  }
+}, []);
+
+
+  const login = (token) => {
+    localStorage.setItem("token", token);
+    const decoded = jwtDecode(token);
+    setUser(decoded);
   };
 
   const logout = () => {
+    localStorage.removeItem("token");
     setUser(null);
-    navigate("/", { replace: true });
   };
 
-  const value = useMemo(
-    () => ({
-      user,
-      login,
-      logout,
-    }),
-    [user]
+  return (
+    <AuthContext.Provider value={{ user, login, logout }}>
+      {children}
+    </AuthContext.Provider>
   );
-  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
 };
 
-export const useAuth = () => {
-  return useContext(AuthContext);
-};
+export const useAuth = () => useContext(AuthContext);

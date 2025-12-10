@@ -34,17 +34,19 @@ export default function Register() {
     const formData = new FormData(event.currentTarget);
 
     const data = {
-      username: formData.get("Username"),
-      email: formData.get("email"),
-      password: formData.get("password"),
-    };
+  name: formData.get("name"),
+  email: formData.get("email"),
+  password: formData.get("password"),
+};
 
-    if (!data.username || !data.email || !data.password) {
-      setAlert({ st: true, msg: "Enter Valid Details" });
-    }
+if (!data.name || !data.email || !data.password) {
+  setAlert({ st: true, msg: "Enter valid details" });
+  return;
+}
+
 
     axios
-      .post("https://zerodha-clone-backend-8nlf.onrender.com/user/register", data, {
+      .post("http://localhost:3001/users/register", data, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -85,7 +87,16 @@ export default function Register() {
             {alert.st == true ? <Alert severity="error">{alert.msg}</Alert> : null}
             <Grid container spacing={2}>
               <Grid item xs={12}>
-                <TextField autoComplete="given-name" name="Username" required fullWidth id="Username" label="Username" autoFocus />
+                <TextField 
+                    autoComplete="given-name"
+                    name="name"
+                    required
+                    fullWidth
+                    id="name"
+                    label="Username"
+                    autoFocus
+                  />
+
               </Grid>
               <Grid item xs={12}>
                 <TextField required fullWidth id="email" label="Email Address" name="email" autoComplete="email" />

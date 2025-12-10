@@ -1,6 +1,14 @@
-const { PositionsModel } = require("../model/PositionsModel");
+const { PositionModel } = require("../middlewares/model/PositionsModel");
 
-module.exports.index = async (req, res) => {
-  let allPositions = await PositionsModel.find({});
-  res.json(allPositions);
+const getAllPositions = async (req, res) => {
+  try {
+    const data = await PositionModel.find({});
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+module.exports = {
+  getAllPositions,
 };

@@ -1,10 +1,7 @@
 const express = require("express");
 const router = express.Router();
+const { getAllHoldings } = require("../controller/holdingsController");
 
-const { verifyToken } = require("../middlewares/verifyToken");
-
-const { index } = require("../controller/holdingsController");
-
-router.get("/index", verifyToken, index);
+router.get("/", getAllHoldings);
 
 module.exports = router;

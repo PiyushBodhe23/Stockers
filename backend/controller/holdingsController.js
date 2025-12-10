@@ -1,6 +1,10 @@
-const { HoldingsModel } = require("../model/HoldingsModel");
+const { HoldingModel } = require("../middlewares/model/HoldingsModel");
 
-module.exports.index = async (req, res) => {
-  let allHoldings = await HoldingsModel.find({});
-  res.json(allHoldings);
+exports.getAllHoldings = async (req, res) => {
+  try {
+    const data = await HoldingModel.find({});
+    res.json(data);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
 };

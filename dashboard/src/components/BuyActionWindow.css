@@ -218,3 +218,37 @@
   background: #9b9b9b;
   color: #fff;
 }
+/* SELL window header */
+#sell-window .header {
+  background: #e64545;
+}
+
+/* SELL main button */
+.btn-red {
+  background: #e64545;
+  color: #fff;
+}
+
+.btn-red:hover {
+  background: #ff6b6b;
+}
+
+/* SELL tab border highlight */
+#sell-window .tab {
+  border-bottom: 2px solid rgba(230, 69, 69, 0.6);
+}
+
+/* SELL tab selector bar */
+#sell-window .tab button::after {
+  background-color: #e64545;
+}
+
+/* SELL options text */
+#sell-window .options span {
+  color: #e64545;
+}
+
+/* SELL quantity input focus */
+#sell-window .inputs fieldset:focus {
+  border: 0.7px solid #e64545;
+}

@@ -1,32 +1,37 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import "./index.css";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import './index.css';
 
-import HomePage from "./landing_page/home/HomePage";
-import AboutPage from "./landing_page/about/AboutPage";
-import ProductPage from "./landing_page/products/ProductsPage";
-import PricingPage from "./landing_page/pricing/PricingPage";
-import Signup from "./landing_page/signup/Signup";
-import SupportPage from "./landing_page/support/SupportPage";
+import Homepage from './landingpage/home/Homepage';
+import Signup from "./landingpage/signup/Signup";
+import Aboutpage from "./landingpage/about/Aboutpage";
+import Productpage from './landingpage/product/Productpage';
+import Pricingpage from './landingpage/pricing/Pricingpage';
+import Supportpage from './landingpage/support/Supportpage';
 
-import Navbar from "./landing_page/Navbar";
-import Footer from "./landing_page/Footer";
-import NotFound from "./landing_page/NotFound";
+import Navbar from './landingpage/Navbar';
+import Footer from './landingpage/Footer';
+import Notfound from './landingpage/Notfound';
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
+import Login from "./landingpage/signup/login";
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <BrowserRouter>
-    <Navbar />
-    <Routes>
-      <Route path="/" element={<HomePage />} />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/about" element={<AboutPage />} />
-      <Route path="/product" element={<ProductPage />} />
-      <Route path="/pricing" element={<PricingPage />} />
-      <Route path="/support" element={<SupportPage />} />
-      <Route path="*" element={<NotFound />} />
-    </Routes>
-    <Footer />
+  <Navbar/>
+      <Routes>
+        <Route path="/" element={<Homepage />}/>
+        <Route path="/signup" element={<Signup />}/>
+        <Route path="/about" element={<Aboutpage />}/>
+        <Route path="/product" element={<Productpage />}/>
+        <Route path="/pricing" element={<Pricingpage />}/>
+        <Route path="/support" element={<Supportpage />}/>
+        <Route path="*" element={<Notfound />}/>
+        <Route path="/login" element={<Login />} />
+        
+      </Routes>
+    <Footer/>
   </BrowserRouter>
 );
