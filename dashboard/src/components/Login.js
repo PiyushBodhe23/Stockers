@@ -37,7 +37,7 @@ export default function Login() {
       password: formData.get("password"),
     };
     axios
-      .post("http://localhost:3001/users/login", data, {
+      .post("https://stockers-backend.vercel.app/users/login", data, {
         headers: {
           "Content-Type": "application/json",
         },
