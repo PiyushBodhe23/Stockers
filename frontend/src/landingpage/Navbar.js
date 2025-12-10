@@ -15,7 +15,7 @@ function Navbar() {
           <form className="d-flex" role="search">
             <ul className="navbar-nav mb-lg-0">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="http://localhost:3000/register">
+                <a className="nav-link active" aria-current="page" href="https://zite-stockers-dashboard.vercel.app/login">
                   Register
                 </a>
               </li>
