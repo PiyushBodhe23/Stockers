@@ -10,7 +10,7 @@ const Orders = () => {
     const token = localStorage.getItem("token");
 
     axios
-      .get("http://localhost:3001/orders", {
+      .get("https://stockers-backend.vercel.app/orders", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
