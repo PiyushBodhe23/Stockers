@@ -7,7 +7,7 @@ function Openaccount() {
             <div class='row text-center'>
                 <h1 class='mt-5'>Open a Stockers account </h1>
                 <p>Modern platform and apps ,0rs investment, and flat 20rs intraday and F&0=O trades. </p>
-                <Link to="/signup">
+                <Link to="https://zite-stockers-dashboard.vercel.app/login">
                     <button className="open-account-button p-2 btn btn-primary fs-5 mb-5" style={{width:"20%", margin:"0 Auto"}}>
                         Open Account
                     </button>
