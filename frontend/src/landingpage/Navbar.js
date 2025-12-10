@@ -40,8 +40,8 @@ function Navbar() {
                 </Link>
               </li>
               <li className="nav-item active">
-                <Link className="nav-link" to="/">
-                  <button className="open-account-button p-2 btn btn-primary fs-5 mb-5" style={{width:"20%", margin:"0 Auto"}}>
+               <Link className="nav-link" to="https://zite-stockers-dashboard.vercel.app/login">
+                 <button className="open-account-button" style={{width:"150%", height:"10%", backgroundColor:"skyblue" , color:"black"}}>
                         Open Account
                     </button>
                 </Link>
