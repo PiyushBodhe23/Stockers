@@ -41,7 +41,9 @@ function Navbar() {
               </li>
               <li className="nav-item active">
                 <Link className="nav-link" to="/">
-                  <i class="fa-solid fa-bars"></i>
+                  <button className="open-account-button p-2 btn btn-primary fs-5 mb-5" style={{width:"20%", margin:"0 Auto"}}>
+                        Open Account
+                    </button>
                 </Link>
               </li>
             </ul>
