@@ -115,8 +115,9 @@ Notification & alert system
 Piyush Bodhe
 📧 Email: piyushbodhe23@gmail.com
 🔗 LinkedIn: www.linkedin.com/in/piyushbodhe
-🌐 Portfolio: pb101123/netlify.app
+🌐 Portfolio: https://pb101123.netlify.app/
 
 📝 License
+
 
 This project is licensed under the MIT License.
