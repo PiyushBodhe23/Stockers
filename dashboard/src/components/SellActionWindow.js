@@ -10,7 +10,7 @@ const SellActionWindow = ({ uid }) => {
 
   const handleSellClick = () => {
     axios.post(
-      "http://localhost:3001/orders",
+      "https://stockers-backend.vercel.app/orders",
       {
         name: uid,
         qty: Number(qty),
