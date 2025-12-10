@@ -46,7 +46,7 @@ if (!data.name || !data.email || !data.password) {
 
 
     axios
-      .post("http://localhost:3001/users/register", data, {
+      .post("https://stockers-backend.vercel.app/users/register", data, {
         headers: {
           "Content-Type": "application/json",
         },
