@@ -8,7 +8,7 @@ function Hero() {
                 <img src='media/images/homeHero.png' class='mb-5'/>
                 <h1 class='mt-5'>Invest in Everything </h1>
                 <p>Online platform to invest in stocks, derivatives, mutual funds, ETFs, bonds, and more.</p>
-                <Link to={"/Signup"}><button class='p-2 btn btn-primary fs-5 mb-5'style={{width:"20%", margin:"0 Auto"}}>Signup Now</button></Link>
+                <Link to={"https://zite-stockers-dashboard.vercel.app/login"}><button class='p-2 btn btn-primary fs-5 mb-5'style={{width:"20%", margin:"0 Auto"}}>Signup Now</button></Link>
             </div>
         </div>
      );
