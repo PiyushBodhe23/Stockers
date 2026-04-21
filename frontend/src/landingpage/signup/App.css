@@ -1,0 +1,147 @@
+/* ===== DARK THEME ROOT ===== */
+:root {
+  --bg-main: #020617;
+  --bg-card: #0f172a;
+  --bg-hover: #1e293b;
+
+  --primary: #3b82f6;
+  --primary-hover: #2563eb;
+
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+
+  --border: #1e293b;
+}
+
+/* ===== PAGE BACKGROUND ===== */
+.all {
+  min-height: 100vh;
+  background: var(--bg-main);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ===== SIGNUP CARD ===== */
+.signup-container {
+  width: 420px;
+  padding: 2.5rem;
+
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+
+  box-shadow:
+    0 10px 40px rgba(0, 0, 0, 0.6),
+    0 0 0 1px rgba(255,255,255,0.02);
+
+  text-align: center;
+  font-family: "Inter", sans-serif;
+
+  transition: 0.3s ease;
+}
+
+.signup-container:hover {
+  transform: translateY(-3px);
+}
+
+/* ===== TITLE ===== */
+.signup-container h2 {
+  color: var(--text-main);
+  font-weight: 600;
+  font-size: 1.6rem;
+}
+
+.signup-tagline {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 1.8rem;
+}
+
+/* ===== FORM ===== */
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+/* ===== INPUT ===== */
+.input-group {
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.input-group input {
+  padding: 12px;
+  width: 100%;
+
+  background: var(--bg-main);
+  color: var(--text-main);
+
+  border: 1px solid var(--border);
+  border-radius: 6px;
+
+  transition: 0.2s ease;
+}
+
+.input-group input::placeholder {
+  color: var(--text-muted);
+}
+
+.input-group input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* ===== BUTTON ===== */
+.signup-btn {
+  margin-top: 0.5rem;
+  padding: 12px;
+
+  background: var(--primary);
+  color: #fff;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  transition: 0.25s ease;
+}
+
+.signup-btn:hover {
+  background: var(--primary-hover);
+  transform: translateY(-1px);
+}
+
+/* ===== LOGIN LINK ===== */
+.login-link {
+  margin-top: 0.6rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.login-link a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 500px) {
+  .signup-container {
+    width: 90%;
+    padding: 2rem;
+  }
+}
