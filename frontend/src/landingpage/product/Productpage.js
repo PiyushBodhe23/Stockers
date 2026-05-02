@@ -24,9 +24,9 @@ function ProductPage() {
         imageURL="media/images/console.png"
         productName="Console"
         productDescription="A powerful dashboard to track, analyze, and understand your investments with detailed insights and reports."
-        learnMore="#"
-        googlePlay="#"
-        appStore="#"
+        learnMore="/homepage"
+        googlePlay="/homepage"
+        appStore="/homepage"
       />
 
       <LeftSection
@@ -52,10 +52,10 @@ function ProductPage() {
         imageURL="media/images/varsity.png"
         productName="Learnexa"
         productDescription="Learn stock markets with structured lessons, real-world examples, and simple explanations."
-        tryDemo="#"
-        learnMore="#"
-        googlePlay="#"
-        appStore="#"
+        tryDemo="/homepage"
+        learnMore="/homepage"
+        googlePlay="/homepage"
+        appStore="/homepage"
       />
 
       {/* TECH CTA */}
@@ -65,7 +65,7 @@ function ProductPage() {
         </p>
 
         <a
-          href="#"
+          href="https://zite-stockers-dashboard.vercel.app/login"
           style={{
             color: "#3b82f6",
             textDecoration: "none",

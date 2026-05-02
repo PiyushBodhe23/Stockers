@@ -24,36 +24,36 @@ function Footer() {
           {/* ACCOUNT */}
           <div className="col-md-2 mb-4">
             <p className="footer-title">Account</p>
-            <a href="#" className="footer-link">Open demat account</a>
-            <a href="#" className="footer-link">Minor account</a>
-            <a href="#" className="footer-link">NRI account</a>
-            <a href="#" className="footer-link">Fund transfer</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Open demat account</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Minor account</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">NRI account</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Fund transfer</a>
           </div>
 
           {/* SUPPORT */}
           <div className="col-md-2 mb-4">
             <p className="footer-title">Support</p>
-            <a href="#" className="footer-link">Contact</a>
-            <a href="#" className="footer-link">Help center</a>
-            <a href="#" className="footer-link">Downloads</a>
-            <a href="#" className="footer-link">Blog</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Contact</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Help center</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Downloads</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Blog</a>
           </div>
 
           {/* COMPANY */}
           <div className="col-md-2 mb-4">
             <p className="footer-title">Company</p>
-            <a href="#" className="footer-link">About</a>
-            <a href="#" className="footer-link">Careers</a>
-            <a href="#" className="footer-link">Press</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">About</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Careers</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Press</a>
           </div>
 
           {/* QUICK LINKS */}
           <div className="col-md-3 mb-4">
             <p className="footer-title">Quick Links</p>
-            <a href="#" className="footer-link">IPO</a>
-            <a href="#" className="footer-link">Charges</a>
-            <a href="#" className="footer-link">Markets</a>
-            <a href="#" className="footer-link">Calculators</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">IPO</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Charges</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Markets</a>
+            <a href="https://zite-stockers-dashboard.vercel.app/login" className="footer-link">Calculators</a>
           </div>
 
         </div>

@@ -15,7 +15,7 @@ function Pricing() {
             Transparent fees that help you focus on trading—not worrying about costs.
           </p>
 
-          <a href="#" className="price-highlight text-decoration-none fw-medium">
+          <a href="https://zite-stockers-dashboard.vercel.app/login" className="price-highlight text-decoration-none fw-medium">
             Compare with others →
           </a>
         </div>
