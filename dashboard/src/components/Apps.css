@@ -1,0 +1,183 @@
+/* ================= MAIN CONTAINER ================= */
+
+.apps-container {
+  min-height: 100vh;
+
+  padding: 40px;
+
+  background: #0f172a;
+
+  color: white;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ================= HEADER ================= */
+
+.apps-header {
+  margin-bottom: 40px;
+}
+
+
+
+.apps-header h1 {
+  font-size: 42px;
+
+  font-weight: 700;
+
+  margin-bottom: 10px;
+}
+
+
+
+.apps-header p {
+  color: #94a3b8;
+
+  font-size: 16px;
+}
+
+
+
+/* ================= GRID ================= */
+
+.apps-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+
+  gap: 25px;
+}
+
+
+
+/* ================= CARD ================= */
+
+.app-card {
+  background: #1e293b;
+
+  border: 1px solid #334155;
+
+  border-radius: 18px;
+
+  padding: 28px;
+
+  transition: all 0.3s ease;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+
+
+/* ================= HOVER EFFECT ================= */
+
+.app-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #3b82f6;
+
+  box-shadow: 0 10px 30px rgba(59, 130, 246, 0.2);
+}
+
+
+
+/* ================= ICON ================= */
+
+.app-icon {
+  width: 70px;
+
+  height: 70px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 34px;
+
+  border-radius: 16px;
+
+  background: rgba(59, 130, 246, 0.15);
+
+  margin-bottom: 20px;
+}
+
+
+
+/* ================= CARD TITLE ================= */
+
+.app-card h3 {
+  font-size: 24px;
+
+  margin-bottom: 12px;
+}
+
+
+
+/* ================= DESCRIPTION ================= */
+
+.app-card p {
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  color: #94a3b8;
+
+  margin-bottom: 25px;
+}
+
+
+
+/* ================= BUTTON ================= */
+
+.open-btn {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  border-radius: 10px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+
+.open-btn:hover {
+  background: #3b82f6;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 768px) {
+
+  .apps-container {
+    padding: 20px;
+  }
+
+  .apps-header h1 {
+    font-size: 32px;
+  }
+
+  .app-card {
+    padding: 22px;
+  }
+
+}

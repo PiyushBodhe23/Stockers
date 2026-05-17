@@ -1,0 +1,277 @@
+.funds-page {
+  min-height: 100vh;
+
+  background: #0f172a;
+
+  color: white;
+
+  padding: 40px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ================= TOPBAR ================= */
+
+.funds-topbar {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 40px;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+
+
+.funds-topbar h1 {
+  font-size: 40px;
+
+  margin-bottom: 8px;
+}
+
+
+
+.funds-topbar p {
+  color: #94a3b8;
+}
+
+
+
+/* ================= BUTTONS ================= */
+
+.fund-buttons {
+  display: flex;
+
+  gap: 15px;
+}
+
+
+
+.btn {
+  border: none;
+
+  padding: 12px 22px;
+
+  border-radius: 10px;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+
+.btn-green {
+  background: #16a34a;
+}
+
+
+
+.btn-green:hover {
+  background: #22c55e;
+}
+
+
+
+.btn-blue {
+  background: #2563eb;
+}
+
+
+
+.btn-blue:hover {
+  background: #3b82f6;
+}
+
+
+
+/* ================= GRID ================= */
+
+.funds-grid {
+  display: grid;
+
+  grid-template-columns: 2fr 1fr;
+
+  gap: 30px;
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+  .funds-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+
+/* ================= CARD ================= */
+
+.fund-card {
+  background: #1e293b;
+
+  border: 1px solid #334155;
+
+  border-radius: 18px;
+
+  padding: 30px;
+}
+
+
+
+/* ================= CARD HEADER ================= */
+
+.card-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 25px;
+}
+
+
+
+.card-header h2 {
+  font-size: 28px;
+}
+
+
+
+.live-dot {
+  color: #22c55e;
+
+  font-size: 14px;
+}
+
+
+
+/* ================= HIGHLIGHT BOX ================= */
+
+.highlight-box {
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #1d4ed8
+  );
+
+  padding: 25px;
+
+  border-radius: 16px;
+
+  margin-bottom: 30px;
+}
+
+
+
+.highlight-box p {
+  opacity: 0.8;
+
+  margin-bottom: 10px;
+}
+
+
+
+.highlight-box h1 {
+  font-size: 38px;
+}
+
+
+
+/* ================= TABLE ================= */
+
+.fund-table {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 18px;
+}
+
+
+
+.fund-row {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding-bottom: 12px;
+
+  border-bottom: 1px solid #334155;
+}
+
+
+
+.fund-row p {
+  color: #cbd5e1;
+}
+
+
+
+.fund-row span {
+  font-weight: 600;
+}
+
+
+
+.total-row span {
+  color: #22c55e;
+}
+
+
+
+/* ================= COMMODITY CARD ================= */
+
+.commodity-card {
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+}
+
+
+
+.commodity-icon {
+  font-size: 70px;
+
+  margin-bottom: 20px;
+}
+
+
+
+.commodity-card h2 {
+  margin-bottom: 15px;
+}
+
+
+
+.commodity-card p {
+  color: #94a3b8;
+
+  line-height: 1.7;
+
+  margin-bottom: 25px;
+}

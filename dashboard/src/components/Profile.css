@@ -1,0 +1,345 @@
+.profile-page {
+  min-height: 100vh;
+
+  background: #0f172a;
+
+  color: white;
+
+  padding: 40px;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ================= HEADER ================= */
+
+.profile-header {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 40px;
+
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+
+
+.profile-left {
+  display: flex;
+
+  align-items: center;
+
+  gap: 20px;
+}
+
+
+
+.profile-avatar {
+  width: 90px;
+
+  height: 90px;
+
+  border-radius: 50%;
+
+  background: linear-gradient(
+    135deg,
+    #2563eb,
+    #3b82f6
+  );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 32px;
+
+  font-weight: bold;
+}
+
+
+
+.profile-header h1 {
+  font-size: 38px;
+
+  margin-bottom: 8px;
+}
+
+
+
+.profile-header p {
+  color: #94a3b8;
+}
+
+
+
+/* ================= BUTTON ================= */
+
+.edit-btn {
+  padding: 14px 24px;
+
+  border: none;
+
+  border-radius: 12px;
+
+  background: #2563eb;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+
+
+.edit-btn:hover {
+  background: #3b82f6;
+}
+
+
+
+/* ================= GRID ================= */
+
+.profile-grid {
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+
+  gap: 30px;
+}
+
+
+
+/* ================= CARD ================= */
+
+.profile-card {
+  background: #1e293b;
+
+  border: 1px solid #334155;
+
+  border-radius: 20px;
+
+  padding: 30px;
+}
+
+
+
+.profile-card h2 {
+  margin-bottom: 30px;
+
+  font-size: 26px;
+}
+
+
+
+/* ================= INFO ================= */
+
+.info-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  margin-bottom: 25px;
+}
+
+
+
+.info-icon {
+  font-size: 22px;
+
+  color: #3b82f6;
+}
+
+
+
+.info-row p {
+  color: #94a3b8;
+
+  margin-bottom: 5px;
+}
+
+
+
+.info-row h4 {
+  font-size: 16px;
+}
+
+
+
+/* ================= STATS ================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 20px;
+}
+
+
+
+.stat-box {
+  background: #111827;
+
+  border-radius: 16px;
+
+  padding: 22px;
+
+  text-align: center;
+}
+
+
+
+.stat-icon {
+  font-size: 28px;
+
+  margin-bottom: 15px;
+}
+
+
+
+.blue {
+  color: #3b82f6;
+}
+
+
+
+.green {
+  color: #22c55e;
+}
+
+
+
+.purple {
+  color: #a855f7;
+}
+
+
+
+.orange {
+  color: #f59e0b;
+}
+
+
+
+.stat-box h3 {
+  font-size: 24px;
+
+  margin-bottom: 8px;
+}
+
+
+
+.stat-box p {
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+
+
+/* ================= ACTIVITY ================= */
+
+.activity-card {
+  grid-column: span 2;
+}
+
+
+
+.activity-item {
+  display: flex;
+
+  align-items: center;
+
+  gap: 16px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #334155;
+}
+
+
+
+.activity-dot {
+  width: 14px;
+
+  height: 14px;
+
+  border-radius: 50%;
+}
+
+
+
+.green-bg {
+  background: #22c55e;
+}
+
+
+
+.red-bg {
+  background: #ef4444;
+}
+
+
+
+.blue-bg {
+  background: #3b82f6;
+}
+
+
+
+.activity-item h4 {
+  margin-bottom: 5px;
+}
+
+
+
+.activity-item p {
+  color: #94a3b8;
+
+  font-size: 14px;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 900px) {
+
+  .activity-card {
+    grid-column: span 1;
+  }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .profile-page {
+    padding: 20px;
+  }
+
+  .profile-header h1 {
+    font-size: 30px;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

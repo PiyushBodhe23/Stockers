@@ -1,0 +1,117 @@
+/* ================= MAIN LAYOUT ================= */
+
+.dashboard-layout {
+  width: 100%;
+
+  min-height: 100vh;
+
+  background: #0f172a;
+
+  overflow-x: hidden;
+}
+
+
+
+/* ================= MAIN BODY ================= */
+
+.dashboard-main {
+  display: flex;
+
+  height: calc(100vh - 80px);
+}
+
+
+
+/* ================= WATCHLIST ================= */
+
+.watchlist-section {
+  width: 340px;
+
+  min-width: 340px;
+
+  background: #111827;
+
+  border-right: 1px solid #1e293b;
+
+  overflow-y: auto;
+
+  scrollbar-width: thin;
+}
+
+
+
+/* ================= CONTENT ================= */
+
+.dashboard-content {
+  flex: 1;
+
+  overflow-y: auto;
+
+  background: #0f172a;
+}
+
+
+
+/* ================= SCROLLBAR ================= */
+
+.dashboard-content::-webkit-scrollbar,
+.watchlist-section::-webkit-scrollbar {
+  width: 8px;
+}
+
+
+
+.dashboard-content::-webkit-scrollbar-thumb,
+.watchlist-section::-webkit-scrollbar-thumb {
+  background: #334155;
+
+  border-radius: 20px;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 1100px) {
+
+  .watchlist-section {
+    width: 280px;
+
+    min-width: 280px;
+  }
+
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+  .dashboard-main {
+    flex-direction: column;
+  }
+
+
+
+  .watchlist-section {
+    width: 100%;
+
+    min-width: 100%;
+
+    height: 300px;
+
+    border-right: none;
+
+    border-bottom: 1px solid #1e293b;
+  }
+
+}
+
+
+
+@media screen and (max-width: 768px) {
+
+  .dashboard-main {
+    height: auto;
+  }
+
+}

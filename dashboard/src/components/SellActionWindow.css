@@ -1,0 +1,180 @@
+/* ================= CONTAINER ================= */
+
+#sell-window {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 420px;
+
+  background-color: #1e1e1e;
+
+  border: 1px solid #333;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
+  z-index: 999;
+
+  overflow: hidden;
+
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ================= ORDER SECTION ================= */
+
+.regular-order {
+  padding: 25px;
+}
+
+
+
+/* ================= INPUTS ================= */
+
+.inputs {
+  display: flex;
+
+  gap: 20px;
+
+  justify-content: space-between;
+}
+
+
+
+fieldset {
+  flex: 1;
+
+  border: 1px solid #444;
+
+  border-radius: 8px;
+
+  padding: 10px 15px;
+
+  background-color: #2b2b2b;
+}
+
+
+
+legend {
+  padding: 0 8px;
+
+  color: #bbb;
+
+  font-size: 14px;
+}
+
+
+
+input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: white;
+
+  font-size: 18px;
+
+  margin-top: 5px;
+}
+
+
+
+/* ================= BUTTON SECTION ================= */
+
+.buttons {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  padding: 18px 25px;
+
+  background-color: #161616;
+
+  border-top: 1px solid #333;
+}
+
+
+
+/* ================= MARGIN TEXT ================= */
+
+.buttons span {
+  color: #aaa;
+
+  font-size: 14px;
+}
+
+
+
+/* ================= BUTTON GROUP ================= */
+
+.buttons div {
+  display: flex;
+
+  gap: 10px;
+}
+
+
+
+/* ================= COMMON BUTTON ================= */
+
+.btn {
+  padding: 10px 18px;
+
+  border-radius: 8px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+
+  border: none;
+}
+
+
+
+/* ================= SELL BUTTON ================= */
+
+.btn-red {
+  background-color: #e53935;
+
+  color: white;
+}
+
+
+
+.btn-red:hover {
+  background-color: #ff4d4d;
+}
+
+
+
+/* ================= CANCEL BUTTON ================= */
+
+.btn-grey {
+  background-color: #3a3a3a;
+
+  color: white;
+}
+
+
+
+.btn-grey:hover {
+  background-color: #505050;
+}

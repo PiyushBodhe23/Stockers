@@ -1,0 +1,389 @@
+/* ================= NAVBAR ================= */
+
+.topbar {
+    width: 100%;
+
+    height: 80px;
+
+    background: #0f172a;
+
+    border-bottom: 1px solid #1e293b;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 35px;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 999;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+/* ================= LEFT ================= */
+
+.topbar-left {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+
+
+/* ================= LOGO ================= */
+
+.logo-section {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+}
+
+
+
+.logo {
+    width: 42px;
+
+    height: 42px;
+
+    object-fit: contain;
+}
+
+
+
+.logo-section h2 {
+    color: white;
+
+    font-size: 28px;
+}
+
+
+
+.logo-section span {
+    color: #3b82f6;
+}
+
+
+
+/* ================= SEARCH ================= */
+
+.search-box {
+    width: 320px;
+
+    height: 45px;
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 12px;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 0 15px;
+
+    gap: 12px;
+}
+
+
+
+.search-icon {
+    color: #94a3b8;
+}
+
+
+
+.search-box input {
+    width: 100%;
+
+    border: none;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+
+
+/* ================= CENTER ================= */
+
+.topbar-center {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+}
+
+
+
+/* ================= MENU ITEM ================= */
+
+.menu-item {
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    text-decoration: none;
+
+    color: #94a3b8;
+
+    padding: 12px 18px;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+
+    font-size: 15px;
+
+    font-weight: 500;
+}
+
+
+
+.menu-item:hover {
+    background: #1e293b;
+
+    color: white;
+}
+
+
+
+.active-menu {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+
+/* ================= ICON ================= */
+
+.menu-icon {
+    font-size: 16px;
+}
+
+
+
+/* ================= RIGHT ================= */
+
+.topbar-right {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    position: relative;
+}
+
+
+
+/* ================= NOTIFICATION ================= */
+
+.notification-icon {
+    position: relative;
+
+    font-size: 20px;
+
+    color: white;
+
+    cursor: pointer;
+}
+
+
+
+.notification-dot {
+    position: absolute;
+
+    top: -2px;
+
+    right: -2px;
+
+    width: 10px;
+
+    height: 10px;
+
+    background: #ef4444;
+
+    border-radius: 50%;
+}
+
+
+
+/* ================= PROFILE ================= */
+
+.profile-section {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    cursor: pointer;
+
+    padding: 8px 14px;
+
+    border-radius: 12px;
+
+    transition: 0.3s ease;
+}
+
+
+
+.profile-section:hover {
+    background: #1e293b;
+}
+
+
+
+/* ================= AVATAR ================= */
+
+.avatar {
+    width: 45px;
+
+    height: 45px;
+
+    border-radius: 50%;
+
+    background: #2563eb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-weight: 700;
+}
+
+
+
+/* ================= PROFILE INFO ================= */
+
+.profile-info h4 {
+    color: white;
+
+    margin-bottom: 4px;
+
+    font-size: 14px;
+}
+
+
+
+.profile-info p {
+    color: #94a3b8;
+
+    font-size: 12px;
+}
+
+
+
+/* ================= DROPDOWN ================= */
+
+.profile-dropdown {
+    position: absolute;
+
+    top: 85px;
+
+    right: 0;
+
+    width: 220px;
+
+    background: #1e293b;
+
+    border: 1px solid #334155;
+
+    border-radius: 14px;
+
+    overflow: hidden;
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+
+
+.profile-dropdown p {
+    padding: 15px 20px;
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.2s ease;
+}
+
+
+
+.profile-dropdown p:hover {
+    background: #334155;
+}
+
+
+
+.profile-dropdown hr {
+    border: none;
+
+    border-top: 1px solid #334155;
+}
+
+
+
+.logout {
+    color: #ef4444 !important;
+}
+
+
+
+/* ================= RESPONSIVE ================= */
+
+@media screen and (max-width: 1200px) {
+
+    .search-box {
+        display: none;
+    }
+
+}
+
+
+
+@media screen and (max-width: 900px) {
+
+    .topbar {
+        padding: 0 15px;
+    }
+
+    .topbar-center {
+        gap: 5px;
+    }
+
+    .menu-item p {
+        display: none;
+    }
+
+    .profile-info {
+        display: none;
+    }
+
+}
