@@ -14,7 +14,7 @@ const Holdings = () => {
 
   useEffect(() => {
 
-    axios.get("http://localhost:3002/allHoldings")
+    axios.get("https://stockersbackend.vercel.app/allHoldings")
       .then((res) => {
         setAllHoldings(res.data);
       })
