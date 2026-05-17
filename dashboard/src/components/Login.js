@@ -34,7 +34,7 @@ const Login = () => {
 
                 const res =
                     await axios.post(
-                        "http://localhost:3002/login",
+                        "https://stockersbackend.vercel.app/login",
                         {
                             email,
                             password,
