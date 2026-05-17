@@ -102,7 +102,7 @@ function CreateTicket() {
                 {section.items.map((item, i) => (
                   <a
                     key={i}
-                    href="https://zite-stockers-dashboard.vercel.app/login"
+                    href="https://tradexdashboard.vercel.app/login"
                     style={{
                       display: "block",
                       color: "#94a3b8",

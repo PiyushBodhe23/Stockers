@@ -63,7 +63,7 @@ function Navbar() {
             <li className="nav-item">
               <a
                 className="nav-link nav-link-custom"
-                href="https://zite-stockers-dashboard.vercel.app/login"
+                href="https://tradexdashboard.vercel.app/login"
               >
                 Login
               </a>
@@ -71,7 +71,7 @@ function Navbar() {
 
             {/* CTA */}
             <li className="nav-item ms-3">
-              <a href="https://zite-stockers-dashboard.vercel.app/login/register">
+              <a href="https://tradexdashboard.vercel.app/register">
                 <button className="nav-cta">
                   Open Account
                 </button>

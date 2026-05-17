@@ -32,7 +32,7 @@ function Education() {
             <p className="muted small">
               Step-by-step guides from basics to advanced strategies.
             </p>
-            <a href="https://zite-stockers-dashboard.vercel.app/login" className="highlight text-decoration-none fw-medium">
+            <a href="https://tradexdashboard.vercel.app/login" className="highlight text-decoration-none fw-medium">
               Start Learning →
             </a>
           </div>
@@ -43,7 +43,7 @@ function Education() {
             <p className="muted small">
               Ask questions and learn from experienced traders.
             </p>
-            <a href="https://zite-stockers-dashboard.vercel.app/login" className="highlight text-decoration-none fw-medium">
+            <a href="https://tradexdashboard.vercel.app/login" className="highlight text-decoration-none fw-medium">
               Join Community →
             </a>
           </div>

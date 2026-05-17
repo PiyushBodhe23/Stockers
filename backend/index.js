@@ -22,7 +22,7 @@ const UserModel = require("./model/UserModel");
 app.use(cors());
 app.use(bodyParser.json());
 
-const PORT = process.env.PORT || 3002;
+// const PORT = process.env.PORT || 3002;
 const uri = process.env.MONGO_URL;
 
 app.get('/allholdings', async (req, res) => {
@@ -205,8 +205,8 @@ app.post("/login", async (req, res) => {
 
 });
 
-app.listen(PORT, () => {
-  console.log("Server is running on port 3002");
-  mongoose.connect(uri);
-  console.log("Connected to MongoDB");
-});
+// app.listen(PORT, () => {
+//   console.log("Server is running on port 3002");
+//   mongoose.connect(uri);
+//   console.log("Connected to MongoDB");
+// });

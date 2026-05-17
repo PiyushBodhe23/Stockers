@@ -16,7 +16,7 @@ function Hero() {
           <h5 className="fw-semibold mb-0">Support Portal</h5>
 
           <a
-            href="https://zite-stockers-dashboard.vercel.app/login"
+            href="https://tradexdashboard.vercel.app/login"
             style={{
               color: "#3b82f6",
               textDecoration: "none",
@@ -69,7 +69,7 @@ function Hero() {
               ].map((item, index) => (
                 <a
                   key={index}
-                  href="https://zite-stockers-dashboard.vercel.app/login"
+                  href="https://tradexdashboard.vercel.app/login"
                   style={{
                     background: "#1e293b",
                     padding: "6px 12px",
@@ -94,7 +94,7 @@ function Hero() {
             <div className="d-flex flex-column gap-3">
 
               <a
-                href="https://zite-stockers-dashboard.vercel.app/login"
+                href="https://tradexdashboard.vercel.app/login"
                 style={{
                   background: "#1e293b",
                   padding: "12px",
@@ -108,7 +108,7 @@ function Hero() {
               </a>
 
               <a
-                href="https://zite-stockers-dashboard.vercel.app/login"
+                href="https://tradexdashboard.vercel.app/login"
                 style={{
                   background: "#1e293b",
                   padding: "12px",

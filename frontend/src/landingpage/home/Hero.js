@@ -20,7 +20,7 @@ function Hero() {
               powerful and intuitive platform.
             </p>
 
-            <Link to="https://zite-stockers-dashboard.vercel.app/login">
+            <Link to="https://tradexdashboard.vercel.app/login">
               <button className="hero-btn">
                 Start Investing →
               </button>

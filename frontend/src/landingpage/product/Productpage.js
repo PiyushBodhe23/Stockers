@@ -65,7 +65,7 @@ function ProductPage() {
         </p>
 
         <a
-          href="https://zite-stockers-dashboard.vercel.app/login"
+          href="https://tradexdashboard.vercel.app/login"
           style={{
             color: "#3b82f6",
             textDecoration: "none",
