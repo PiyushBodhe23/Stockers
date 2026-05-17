@@ -9,7 +9,7 @@ const Positions = () => {
 
   useEffect(() => {
 
-    axios.get("http://localhost:3002/allPositions")
+    axios.get("https://stockersbackend.vercel.app/allPositions")
       .then((res) => {
         setPositions(res.data);
       })
