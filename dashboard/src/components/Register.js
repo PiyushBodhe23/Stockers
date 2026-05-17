@@ -36,7 +36,7 @@ const Register = () => {
       e.preventDefault();
       try {
         await axios.post(
-          "http://localhost:3002/register",
+          "https://stockersbackend.vercel.app/register",
           {
             username,
             email,
